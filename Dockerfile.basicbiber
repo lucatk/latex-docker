@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER Luca Killmaier <lucakillmaier@lu-co.de>
+MAINTAINER Luca Killmaier <lucakilmaier@lu-co.de>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -q \
@@ -21,6 +21,8 @@ ENV HOME /data
 WORKDIR /data
 
 # Install latex packages
+RUN tlmgr install biber
+RUN tlmgr install biblatex
 RUN tlmgr install latexmk
 
 VOLUME ["/data"]

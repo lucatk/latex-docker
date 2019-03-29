@@ -1,4 +1,4 @@
-FROM blang/latex:ctanbasic
-MAINTAINER Benedikt Lang <mail@blang.io>
+FROM lucatk/latex:ctanbasic
+MAINTAINER Luca Killmaier <lucakilmaier@lu-co.de>
 
 RUN tlmgr install scheme-full

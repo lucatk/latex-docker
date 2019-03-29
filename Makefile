@@ -12,6 +12,9 @@ build_ubuntu: Dockerfile.ubuntu
 build_basic: Dockerfile.basic
 	@docker build -f Dockerfile.basic -t $(IMAGE):ctanbasic .
 
+build_basicbiber: Dockerfile.basicbiber
+	@docker build -f Dockerfile.basicbiber -t $(IMAGE):ctanbasicbiber .
+
 build_full: build_basic Dockerfile.full
 	@docker build -f Dockerfile.full -t $(IMAGE):ctanfull .
 
